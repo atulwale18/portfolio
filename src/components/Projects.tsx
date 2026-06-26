@@ -6,25 +6,43 @@ const projects = [
     id: 1,
     title: "CI/CD Pipeline using Jenkins",
     tech: ["GitHub", "Jenkins", "Docker", "Kubernetes"],
-    description: "Automated application build, Docker image creation, and Kubernetes deployment using Jenkins pipelines."
+    description: "Automated application build, Docker image creation, and Kubernetes deployment using Jenkins pipelines.",
+    link: "#"
   },
   {
     id: 2,
     title: "AWS Infrastructure using Terraform",
     tech: ["Terraform", "AWS", "EC2", "VPC", "IAM"],
-    description: "Provisioned cloud infrastructure using Infrastructure as Code with reusable Terraform modules."
+    description: "Provisioned cloud infrastructure using Infrastructure as Code with reusable Terraform modules.",
+    link: "#"
   },
   {
     id: 3,
     title: "Kubernetes Application Deployment",
     tech: ["Docker", "Kubernetes", "YAML"],
-    description: "Deployed containerized applications with Deployments, Services, ConfigMaps, and Secrets."
+    description: "Deployed containerized applications with Deployments, Services, ConfigMaps, and Secrets.",
+    link: "#"
   },
   {
     id: 4,
     title: "Server Automation using Ansible",
     tech: ["Ansible", "Linux", "Nginx"],
-    description: "Automated server configuration, package installation, and application deployment using Ansible Playbooks."
+    description: "Automated server configuration, package installation, and application deployment using Ansible Playbooks.",
+    link: "#"
+  },
+  {
+    id: 5,
+    title: "AI ATS Resume Scorer",
+    tech: ["Docker", "Python", "GenAI", "Streamlit"],
+    description: "Containerized an AI-powered application to evaluate resumes against job descriptions and calculate ATS scores.",
+    link: "#"
+  },
+  {
+    id: 6,
+    title: "AI-Powered Blood Donor Finder",
+    tech: ["Docker", "Machine Learning", "Python"],
+    description: "Dockerized an intelligent system designed to connect blood donors with recipients efficiently using AI.",
+    link: "https://ai-powered-blood-donor-finder.vercel.app/"
   }
 ];
 
@@ -44,9 +62,12 @@ const Projects: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.a 
+            href={project.link}
+            target={project.link !== "#" ? "_blank" : undefined}
+            rel={project.link !== "#" ? "noopener noreferrer" : undefined}
             key={project.id}
-            className="bg-[#0d1117] rounded-xl border border-gray-800 overflow-hidden group hover:border-portfolio-accent transition-colors duration-300 flex flex-col"
+            className="bg-[#0d1117] rounded-xl border border-gray-800 overflow-hidden group hover:border-portfolio-accent transition-colors duration-300 flex flex-col cursor-pointer block"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -76,7 +97,7 @@ const Projects: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>

@@ -27,23 +27,25 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex items-center gap-4 text-portfolio-text">
-            <div className="w-12 h-12 bg-[#161b22] rounded-full flex items-center justify-center text-portfolio-accent border border-gray-800">
+          <div className="flex items-start gap-4 text-portfolio-text">
+            <div className="w-12 h-12 bg-[#161b22] rounded-full flex items-center justify-center text-portfolio-accent border border-gray-800 flex-shrink-0">
               <FaEnvelope className="text-xl" />
             </div>
             <div>
-              <p className="text-sm text-portfolio-text-muted">Email</p>
-              <a href="mailto:contact@example.com" className="font-semibold hover:text-portfolio-accent transition-colors">contact@example.com</a>
+              <p className="text-sm text-portfolio-text-muted">Primary Email</p>
+              <a href="mailto:atulwale4@gmail.com" className="font-semibold hover:text-portfolio-accent transition-colors block mb-1">atulwale4@gmail.com</a>
+              <p className="text-sm text-portfolio-text-muted mt-2">Secondary Email</p>
+              <a href="mailto:atulwale1@gmail.com" className="font-semibold hover:text-portfolio-accent transition-colors block">atulwale1@gmail.com</a>
             </div>
           </div>
           
           <div className="flex items-center gap-4 text-portfolio-text">
-            <div className="w-12 h-12 bg-[#161b22] rounded-full flex items-center justify-center text-portfolio-accent border border-gray-800">
+            <div className="w-12 h-12 bg-[#161b22] rounded-full flex items-center justify-center text-portfolio-accent border border-gray-800 flex-shrink-0">
               <FaPhoneAlt className="text-xl" />
             </div>
             <div>
               <p className="text-sm text-portfolio-text-muted">Phone</p>
-              <a href="tel:+910000000000" className="font-semibold hover:text-portfolio-accent transition-colors">+91 00000 00000</a>
+              <a href="tel:+917820946531" className="font-semibold hover:text-portfolio-accent transition-colors">+91 78209 46531</a>
             </div>
           </div>
 
@@ -74,7 +76,7 @@ const Contact: React.FC = () => {
               <FaLinkedin className="text-2xl" />
             </a>
           </div>
-          <a href="mailto:contact@example.com" className="bg-portfolio-accent hover:bg-portfolio-accent-hover text-portfolio-bg font-bold py-3 px-8 rounded-lg transition-colors w-full">
+          <a href="mailto:atulwale4@gmail.com" className="bg-portfolio-accent hover:bg-portfolio-accent-hover text-portfolio-bg font-bold py-3 px-8 rounded-lg transition-colors w-full">
             Say Hello
           </a>
         </motion.div>

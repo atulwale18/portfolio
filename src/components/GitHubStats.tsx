@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const GitHubStats: React.FC = () => {
-  // Using a generic placeholder username, but it can be changed to Atul's actual GitHub username
-  const githubUsername = "AtulWale"; // Placeholder or actual if known
+  // Using Atul's actual GitHub username
+  const githubUsername = "atulwale18"; 
 
   return (
     <section id="github" className="py-20 px-6 max-w-5xl mx-auto">
